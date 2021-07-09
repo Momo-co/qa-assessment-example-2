@@ -12,7 +12,20 @@
     # one("punctation, or something?", " ,?") → "punctuation__or_something_"
 
 def one(word, chars):
-    pass
+    new_word_list = []
+    for x in word:
+        new_word_list.append(x)
+        for y in chars:
+            if x == y:
+                new_word_list.pop()
+                new_word_list.append("_")
+                break
+
+    newWord = "" 
+    for z in new_word_list:
+        newWord = newWord + z       
+    return newWord
+
 
     # <QUESTION 2>
 
